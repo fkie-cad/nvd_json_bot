@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.8.3' # Update me!
+    hooks:
+      - id: bandit
+        exclude: tests/
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.0
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+       - id: isort
+  - repo: local
+    hooks:
+    - id: pyright
+      name: pyright
+      entry: pyright
+      language: node
+      types: [ python ]
+      exclude: tests/
+      pass_filenames: true
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true

@@ -1,0 +1,94 @@
+version: "3"
+services:
+  opensearch:
+    image: opensearchproject/opensearch:latest
+    container_name: opensearch
+    environment:
+      - cluster.name=opensearch-nvd-cluster
+      - node.name=opensearch
+      - path.repo=/usr/share/opensearch/data/snapshots
+      - discovery.seed_hosts=opensearch
+      - cluster.initial_cluster_manager_nodes=opensearch
+      - bootstrap.memory_lock=true
+      - "OPENSEARCH_JAVA_OPTS=-Xms4096m -Xmx4096m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    volumes:
+      - opensearch-nvd-data:/usr/share/opensearch/data
+    ports:
+      - 127.0.0.1:9200:9200
+      - 127.0.0.1:9600:9600
+    networks:
+      - nvd-net
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:latest
+    container_name: opensearch-dashboards
+    ports:
+      - 127.0.0.1:5601:5601
+    environment:
+      OPENSEARCH_HOSTS: '["https://opensearch:9200"]'
+    networks:
+      - nvd-net
+  sync-nvd:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: sync
+    depends_on:
+      - opensearch
+    command: "sync_nvd"
+    profiles: ["sync_nvd"]
+    volumes:
+      - ./data/:/nvd/data
+    networks:
+      - nvd-net
+  update-git-repo:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: update
+    depends_on:
+      - opensearch
+    command: "update_git_repo"
+    profiles: ["update_git_repo"]
+    volumes:
+      - ./data/:/nvd/data
+    networks:
+      - nvd-net
+  release-git-package:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: release
+    depends_on:
+      - opensearch
+    command: "release_git_package"
+    profiles: ["release_git_package"]
+    volumes:
+      - ./data/:/nvd/data
+    networks:
+      - nvd-net
+  rebuild-nvd:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: rebuild
+    depends_on:
+      - opensearch
+    command: "rebuild_nvd"
+    profiles: ["rebuild_nvd"]
+    volumes:
+      - ./data/:/nvd/data
+    networks:
+      - nvd-net
+
+volumes:
+  opensearch-nvd-data:
+
+networks:
+  nvd-net:

@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "nvd_json_bot"
+version = "0.1.0"
+description = "Sync the NVD CVE data into a git repository"
+authors = ["René Helmke <rene.helmke@fkie.fraunhofer.de>"]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+multi_line_output = 3
+known_first_party = "poetry"
+
+[tool.black]
+line_length = 120
+
+[tool.poetry.scripts]
+cli_script = "nvd_json_bot.run:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7"
+pytest-mock = "^3.10.0"
+pytest-cov = "^6.0.0"
+responses = "^0.23.1"
+openmock = "^2.2.0"
+pyright = "^1.1.396"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opensearch-dsl = "^2.1.0"
+opensearch-py = "^2.2.0"
+rich = "^13.3.3"
+dollar-ref = "^0.1.3"
+pygithub = "^1.58.1"
+jinja2 = "^3.1.2"
+gitpython = "^3.1.31"
+loguru = "^0.7.0"
+coverage = "^7.2.5"
+packaging = "^23.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

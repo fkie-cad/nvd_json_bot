@@ -1,0 +1,9 @@
+[Unit]
+Description=NVD-Repo Sync
+
+[Service]
+Type=exec
+User=<USER>
+Group=<USER>
+WorkingDirectory=<ROOT OF THIS PROJECT>
+ExecStart=<ROOT OF THIS PROJECT>/scripts/systemd_timer_release.bash

@@ -1,0 +1,45 @@
+{
+  "time_anchors": {
+    "path": "data/time_anchors.json"
+  },
+  "github": {
+    "personal_access_token": "github_pat_TOKEN_HERE",
+    "deploy_key_path": "ssh/DEPLOY_KEY_HERE",
+    "local_repository": "data/repo_cache/nvd-json-data-feeds",
+    "remote_repository": "fkie-cad/nvd-json-data-feeds",
+    "readme_template": "data/templates/README.tpl.md",
+    "clone_type": "https",
+    "branch": "main",
+    "lzma_compression_level": 9
+  },
+  "opensearch": {
+    "host": "opensearch",
+    "port": 9200,
+    "user": "admin",
+    "password": "admin",
+    "cve_index": "cve",
+    "http_compress": true,
+    "use_ssl": true,
+    "verify_certs": false,
+    "ssl_show_warn": false,
+    "ssl_assert_hostname": false,
+    "scroll_timeout": "30s",
+    "scroll_size": 10000
+  },
+  "logging": {
+    "log_path": "data/logs/nvd_json_bot.log",
+    "level": "DEBUG",
+    "rotation": "1 week",
+    "compression": "xz"
+  },
+  "teams": {
+    "connector_url": "https://<OFFICE365-CONNECTOR-URL-HERE>",
+    "enabled": false
+  },
+  "nvd": {
+    "endpoint": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+    "throttle_window_size": 30.0,
+    "throttle_window_request_limit": 5.0,
+    "api_key": "<OPTIONAL API KEY>"
+  }
+}

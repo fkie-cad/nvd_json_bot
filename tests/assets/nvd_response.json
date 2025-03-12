@@ -1,0 +1,670 @@
+{
+  "resultsPerPage": 4,
+  "startIndex": 0,
+  "totalResults": 4,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2023-05-05T13:58:53.240",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2015-8833",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2016-04-12T01:59:27.207",
+        "lastModified": "2021-08-04T13:11:34.987",
+        "vulnStatus": "Modified",
+        "evaluatorComment": "<a href=\"http://cwe.mitre.org/data/definitions/416.html\">CWE-416: Use After Free</a>",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use-after-free vulnerability in the create_smp_dialog function in gtk-dialog.c in the Off-the-Record Messaging (OTR) pidgin-otr plugin before 4.0.2 for Pidgin allows remote attackers to execute arbitrary code via vectors related to the \"Authenticate buddy\" menu item."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de uso despu�s de liberaci�n memoria en la funci�n create_smp_dialog de gtk-dialog.c en el plugin Off-the-Record Messaging (OTR) pidgin-otr anterior a 4.0.2 para Pidgin, que permite a atacantes remotos ejecutar c�digo arbitrario a trav�s de vectores relacionados con el elemento del men� \"Authenticate buddy\""
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE",
+                "baseScore": 10
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10,
+              "impactScore": 10,
+              "acInsufInfo": true,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cypherpunks:pidgin-otr:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "4.0.1",
+                    "matchCriteriaId": "805A068D-0150-4593-BBD5-011D62A9CCF5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00095.html",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-updates/2016-03/msg00109.html",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.debian.org/security/2016/dsa-3528",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2016/03/09/13",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2016/03/09/8",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/84295",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://blog.fuzzing-project.org/39-Heap-use-after-free-in-Pidgin-OTR-plugin-CVE-2015-8833.html",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://bugs.otr.im/issues/128",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://bugs.otr.im/issues/88",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://bugs.otr.im/projects/pidgin-otr/repository/revisions/aaf551b9dd5cbba8c4abaa3d4dc7ead860efef94",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://lists.cypherpunks.ca/pipermail/otr-users/2016-March/002582.html",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/201701-10",
+            "source": "cve@mitre.org"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-20431",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2021-07-26T12:15:08.457",
+        "lastModified": "2021-08-04T14:07:41.377",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM i2 Analyst's Notebook Premium 9.2.0, 9.2.1, and 9.2.2 does not invalidate session after logout which could allow an an attacker to obtain sensitive information from the system. IBM X-Force ID: 196342."
+          },
+          {
+            "lang": "es",
+            "value": "IBM i2 Analyst's Notebook Premium versiones 9.2.0, 9.2.1 y 9.2.2, no invalida la sesi�n tras el cierre de sesi�n, lo que podr�a permitir a un atacante obtener informaci�n confidencial del sistema. IBM X-Force ID: 196342"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE",
+                "baseScore": 4.3
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-613"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:i2_analysts_notebook:9.2.0:*:*:*:premium:*:*:*",
+                    "matchCriteriaId": "C4AA1C1A-6B34-4D0C-B136-62B58082D191"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:i2_analysts_notebook:9.2.1:*:*:*:premium:*:*:*",
+                    "matchCriteriaId": "794C3988-FD37-4215-80F2-BAC260274589"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:i2_analysts_notebook:9.2.2:*:*:*:premium:*:*:*",
+                    "matchCriteriaId": "9FE58082-3DAD-41A1-9254-21CCE58482A9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/196342",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "VDB Entry",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.ibm.com/support/pages/node/6474865",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-20560",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2021-07-26T12:15:08.503",
+        "lastModified": "2021-08-04T14:03:34.297",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Sterling Connect:Direct Browser User Interface 1.4.1.1 and 1.5.0.2 could allow a remote attacker to hijack the clicking action of the victim. By persuading a victim to visit a malicious Web site, a remote attacker could exploit this vulnerability to hijack the victim's click actions and possibly launch further attacks against the victim. IBM X-Force ID: 199229."
+          },
+          {
+            "lang": "es",
+            "value": "IBM Sterling Connect:Direct Browser User Interface versiones 1.4.1.1 y 1.5.0.2, podr�a permitir a un atacante remoto secuestrar la acci�n de hacer clic de la v�ctima. Al persuadir a una v�ctima a visitar un sitio web malicioso, un atacante remoto podr�a explotar esta vulnerabilidad para secuestrar las acciones de clic de la v�ctima y posiblemente lanzar m�s ataques contra la v�ctima. IBM X-Force ID: 199229"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE",
+                "baseScore": 4.9
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 6.8,
+              "impactScore": 4.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1021"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:sterling_connect_direct_user_interface:1.4.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "348E80C0-65FF-4DC2-A964-A0CE4F3ED211"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:sterling_connect_direct_user_interface:1.5.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "006447C1-928E-4FA8-A92D-2C42EF7C3FC0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:hp:hp-ux:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F480AA32-841A-4E68-9343-B2E7548B0A0C"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:ibm:aix:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E492C463-D76E-49B7-A4D4-3B499E422D89"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:oracle:solaris:-:*:*:*:*:*:-:*",
+                    "matchCriteriaId": "F5027746-8216-452D-83C5-2F8E9546F2A5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/199229",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "VDB Entry",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.ibm.com/support/pages/node/6474829",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-20560",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2021-07-26T12:15:08.503",
+        "lastModified": "2021-08-04T14:03:34.297",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Sterling Connect:Direct Browser User Interface 1.4.1.1 and 1.5.0.2 could allow a remote attacker to hijack the clicking action of the victim. By persuading a victim to visit a malicious Web site, a remote attacker could exploit this vulnerability to hijack the victim's click actions and possibly launch further attacks against the victim. IBM X-Force ID: 199229."
+          },
+          {
+            "lang": "es",
+            "value": "IBM Sterling Connect:Direct Browser User Interface versiones 1.4.1.1 y 1.5.0.2, podr�a permitir a un atacante remoto secuestrar la acci�n de hacer clic de la v�ctima. Al persuadir a una v�ctima a visitar un sitio web malicioso, un atacante remoto podr�a explotar esta vulnerabilidad para secuestrar las acciones de clic de la v�ctima y posiblemente lanzar m�s ataques contra la v�ctima. IBM X-Force ID: 199229"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE",
+                "baseScore": 4.9
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 6.8,
+              "impactScore": 4.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1021"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:sterling_connect_direct_user_interface:1.4.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "348E80C0-65FF-4DC2-A964-A0CE4F3ED211"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:sterling_connect_direct_user_interface:1.5.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "006447C1-928E-4FA8-A92D-2C42EF7C3FC0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:hp:hp-ux:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F480AA32-841A-4E68-9343-B2E7548B0A0C"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:ibm:aix:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E492C463-D76E-49B7-A4D4-3B499E422D89"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:oracle:solaris:-:*:*:*:*:*:-:*",
+                    "matchCriteriaId": "F5027746-8216-452D-83C5-2F8E9546F2A5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/199229",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "VDB Entry",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.ibm.com/support/pages/node/6474829",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
