@@ -16,7 +16,7 @@ The bot is designed to run as periodic execution service (cron, systemd, ...). D
 ## Current state of documentation & an invitation to contribute
 
 `nvd_json_bot` and the [fkie-cad/nvd-json-data-feeds](https://github.com/fkie-cad/nvd-json-data-feeds) repository are side-projects maintained by René Helmke at the Cyber Analysis & Defense Group from Fraunhofer FKIE.
-As [requested by the community](https://github.com/fkie-cad/nvd-json-data-feeds/issues/1)x, I am happy to release the bot's source code to establish more transparency regarding the processing steps applied to the data feeds.
+As [requested by the community](https://github.com/fkie-cad/nvd-json-data-feeds/issues/1), I am happy to release the bot's source code to establish more transparency regarding the processing steps applied to the data feeds.
 
 While I am dedicated to keep both the data feeds and this bot alive and well-maintained, please understand that there is currently sparse documentation available.
 I hope this changes over the course of time. Of course, together we can do more. Thus, I'd like to invite you to contribute to this project :-).
@@ -24,3 +24,9 @@ I hope this changes over the course of time. Of course, together we can do more.
 ## Non-Endorsement Clause
 
 This project uses and redistributes data from the NVD API but is not endorsed or certified by the NVD.
+
+## Acknowledgements
+
+The FKIE would like to thank the [National Institute of Standards and Technology](https://www.nist.gov/) and [MITRE Corporation](https://www.cve.org/) for providing the security community with the datasets that this bot uses.
+
+The development of this source code is funded by the [German Federal Ministry of Defence](https://www.bmvg.de/en).
